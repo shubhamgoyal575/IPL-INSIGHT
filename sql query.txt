@@ -1,0 +1,5 @@
+select match_id, match_, teamInnings,
+	sum(runs) as Runs,sum(4s) as fours,sum(6s) as sixes
+from fact_bating_summary
+group by match_id,match_,teamInnings
+order by match_id;
